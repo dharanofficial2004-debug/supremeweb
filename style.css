@@ -2142,6 +2142,36 @@ button {
     line-height: 1.6;
 }
 
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .hc-hero-premium {
+        height: auto;
+        padding: 120px 0 80px;
+        text-align: center;
+    }
+
+    .hc-hero-content {
+        margin: 0 auto;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
 /* SECTION 2: FACILITIES + FORM */
 .facilities-split {
     display: grid;
