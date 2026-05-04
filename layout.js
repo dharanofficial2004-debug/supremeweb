@@ -32,14 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function initHeader() {
-    // Sticky header
+    // Header shadow on scroll
     const header = document.getElementById('header');
     if (header) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('sticky');
+            if (window.scrollY > 20) {
+                header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+                header.style.padding = '8px 0';
             } else {
-                header.classList.remove('sticky');
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.05)';
+                header.style.padding = '10px 0';
             }
         });
     }

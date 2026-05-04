@@ -2,34 +2,25 @@
 
 .doctors-header-hero {
     position: relative;
-    padding: 160px 0 100px;
-    background: linear-gradient(135deg, var(--dark-black), var(--primary-blue));
-    color: var(--white);
+    padding: 140px 0 80px;
+    background: var(--soft-light);
+    color: var(--dark-black);
     text-align: center;
     overflow: hidden;
 }
 
-.doctors-header-hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top right, rgba(70, 127, 247, 0.4), transparent);
-    z-index: 1;
-}
-
-.doctors-header-hero .container {
-    position: relative;
-    z-index: 10;
+.doctors-header-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
 }
 
 .section-desc {
-    max-width: 800px;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.doctors-header-hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    max-width: 700px;
+    color: var(--text-light);
+    font-size: 1.1rem;
 }
 
 .search-bar-section {
