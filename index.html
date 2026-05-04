@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supreme Speciality Hospitals | Premium Healthcare</title>
+    <meta name="description"
+        content="Experience world-class healthcare at Supreme Speciality Hospitals. Specialized medical excellence with 24/7 emergency services.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <!-- Floating CTA -->
+    <button class="floating-cta ripple" onclick="openAppointmentModal()">
+        <span class="pulse-ring"></span>
+        <i class="fas fa-calendar-plus"></i>
+        <span>Book an Appointment</span>
+    </button>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-video-wrapper">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="https://supremehospitals.in/wp-content/uploads/2026/02/banner-resize-1-2.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="container hero-flexbox fade-up">
+                    <div class="hero-text-side">
+                        <h1 class="reveal-text">Supreme Speciality Hospitals<br><span class="gradient-text">Times Health
+                                Excellence Award 2026 – Tamil Nadu</span></h1>
+                        <p class="hero-subtext fade-up">Honoured for Service Excellence in Quality Care with Outstanding
+                            Value for Money. This recognition reflects our commitment to patient-centric care, clinical
+                            excellence, and ethical healthcare practices.</p>
+                        <div class="hero-buttons fade-up stagger-1">
+                            <button class="btn btn-primary btn-glow" onclick="openAppointmentModal()">Book
+                                Appointment</button>
+                            <a href="#contact" class="btn btn-glass">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-badges d-none d-md-flex fade-up stagger-2">
+                <div class="badge-item glass-card"><i class="fas fa-user-md text-orange"></i> <span>Expert
+                        Doctors</span></div>
+                <div class="badge-item glass-card"><i class="fas fa-ambulance text-red pulse"></i> <span>24/7
+                        Emergency</span></div>
+                <div class="badge-item glass-card"><i class="fas fa-heartbeat text-pink"></i> <span>Advanced ICU</span>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero Image Showcase Section -->
+        <section class="hero-showcase section-padding">
+            <div class="container showcase-grid fade-up">
+                <div class="showcase-item">
+                    <img src="https://supremehospitals.in/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-07-at-4.02.29-PM.jpeg"
+                        alt="Supreme Care Excellence" class="img-fluid rounded-20 shadow-lg">
+                </div>
+                <div class="showcase-item">
+                    <img src="https://supremehospitals.in/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-07-at-4.02.46-PM.jpeg"
+                        alt="Patient Care Excellence" class="img-fluid rounded-20 shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Expertise (Flip Cards) -->
+        <section id="expertise" class="expertise-section section-padding bg-soft">
+            <div class="container">
+                <div class="section-title text-center fade-up">
+                    <h5 class="subtitle text-accent">Centers of Excellence</h5>
+                    <h2>Our Specialised Departments</h2>
+                    <div class="title-line mx-auto"></div>
+                </div>
+                <div class="flip-grid mt-5">
+                    <!-- Card 1 -->
+                    <div class="flip-card fade-up stagger-1">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-gradient-blue">
+                                <h3>Psychiatry</h3>
+                            </div>
+                            <div class="flip-card-back"
+                                style="background-image: url('https://supremehospitals.in/wp-content/uploads/2026/02/psycho.webp');">
+                                <div class="back-overlay"></div>
+                                <div class="back-content">
+                                    <h3>Psychiatry</h3>
+                                    <p>Comprehensive mental health care & counseling services.</p>
+                                    <a href="department.html?dept=psychiatry" class="btn btn-sm btn-outline-white">Know
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="flip-card fade-up stagger-2">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-gradient-orange">
+                                <h3>Gastroenterology</h3>
+                            </div>
+                            <div class="flip-card-back"
+                                style="background-image: url('https://supremehospitals.in/wp-content/uploads/2026/02/gastro.webp');">
+                                <div class="back-overlay"></div>
+                                <div class="back-content">
+                                    <h3>Gastroenterology</h3>
+                                    <p>Advanced digestive system diagnostics and treatments.</p>
+                                    <a href="department.html?dept=medical-gastroenterology"
+                                        class="btn btn-sm btn-outline-white">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="flip-card fade-up stagger-3">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-gradient-pink">
+                                <h3>Cardiology</h3>
+                            </div>
+                            <div class="flip-card-back"
+                                style="background-image: url('https://supremehospitals.in/wp-content/uploads/2026/02/cardio.webp');">
+                                <div class="back-overlay"></div>
+                                <div class="back-content">
+                                    <h3>Cardiology</h3>
+                                    <p>State-of-the-art heart care center 24/7.</p>
+                                    <a href="department.html?dept=cardiology" class="btn btn-sm btn-outline-white">Know
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="flip-card fade-up stagger-4">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-gradient-blue-dark">
+                                <h3>Gynecology</h3>
+                            </div>
+                            <div class="flip-card-back"
+                                style="background-image: url('https://supremehospitals.in/wp-content/uploads/2026/02/gyno.webp');">
+                                <div class="back-overlay"></div>
+                                <div class="back-content">
+                                    <h3>Gynecology</h3>
+                                    <p>Empowering women with expert wellness care.</p>
+                                    <a href="department.html?dept=obstetrics-gynaecology"
+                                        class="btn btn-sm btn-outline-white">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="flip-card fade-up stagger-1">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-gradient-cyan">
+                                <h3>Orthopedics</h3>
+                            </div>
+                            <div class="flip-card-back"
+                                style="background-image: url('https://supremehospitals.in/wp-content/uploads/2026/02/ortho.webp');">
+                                <div class="back-overlay"></div>
+                                <div class="back-content">
+                                    <h3>Orthopedics</h3>
+                                    <p>Advanced joint, spine, and trauma care.</p>
+                                    <a href="department.html?dept=orthopedics" class="btn btn-sm btn-outline-white">Know
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="flip-card fade-up stagger-2">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-gradient-blue">
+                                <h3>Dental Care</h3>
+                            </div>
+                            <div class="flip-card-back"
+                                style="background-image: url('https://supremehospitals.in/wp-content/uploads/2026/02/dental.webp');">
+                                <div class="back-overlay"></div>
+                                <div class="back-content">
+                                    <h3>Dental Care</h3>
+                                    <p>Precision dentistry for beautiful smiles.</p>
+                                    <a href="department.html?dept=dental" class="btn btn-sm btn-outline-white">Know
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="flip-card fade-up stagger-3">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-gradient-orange">
+                                <h3>Pediatrics</h3>
+                            </div>
+                            <div class="flip-card-back"
+                                style="background-image: url('https://supremehospitals.in/wp-content/uploads/2026/02/prea.webp');">
+                                <div class="back-overlay"></div>
+                                <div class="back-content">
+                                    <h3>Pediatrics</h3>
+                                    <p>Expert child healthcare with compassion.</p>
+                                    <a href="department.html?dept=pediatrics" class="btn btn-sm btn-outline-white">Know
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="flip-card fade-up stagger-4">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-gradient-cyan">
+                                <h3>Urology</h3>
+                            </div>
+                            <div class="flip-card-back"
+                                style="background-image: url('https://supremehospitals.in/wp-content/uploads/2026/02/urolo.webp');">
+                                <div class="back-overlay"></div>
+                                <div class="back-content">
+                                    <h3>Urology</h3>
+                                    <p>Specialized treatments for urological conditions.</p>
+                                    <a href="department.html?dept=urology" class="btn btn-sm btn-outline-white">Know
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Doctors (Fast Auto-scroll Carousel) -->
+        <section id="doctors" class="doctors-section section-padding">
+            <div class="container">
+                <div class="section-title text-center fade-up">
+                    <h5 class="subtitle text-accent">Our Specialists</h5>
+                    <h2>Meet Our Expert Doctors</h2>
+                    <p class="section-desc mx-auto">Discover our team of leading medical professionals across various
+                        specialties.</p>
+                    <div class="title-line mx-auto"></div>
+                </div>
+            </div>
+
+            <div class="swiper swiper-doctors mt-5">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="doctor-card fade-up border-radius">
+                            <div class="doc-info text-left p-4">
+                                <h4>Dr. K. Anand Manjunath</h4>
+                                <span class="doc-spec">Cardiologist</span>
+                                <p class="mt-2 text-muted">A dedicated professional with extensive experience in
+                                    advanced cardiovascular interventions.</p>
+                                <button class="btn btn-outline-primary btn-sm full-width mt-3"
+                                    onclick="openAppointmentModal('Dr. K. Anand Manjunath', 'CARDIOLOGY')">Book
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="doctor-card fade-up stagger-1 border-radius">
+                            <div class="doc-info text-left p-4">
+                                <h4>Dr. K. Rini Ezhil</h4>
+                                <span class="doc-spec">Gynecologist</span>
+                                <p class="mt-2 text-muted">Specializing in women's wellness, providing compassionate and
+                                    comprehensive maternity care.</p>
+                                <button class="btn btn-outline-primary btn-sm full-width mt-3"
+                                    onclick="openAppointmentModal('Dr. K. Rini Ezhil', 'OBSTRETICS & GYNECOLOGY')">Book
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="doctor-card fade-up stagger-2 border-radius">
+                            <div class="doc-info text-left p-4">
+                                <h4>Dr. F. Abdul Khader</h4>
+                                <span class="doc-spec">Orthopedics</span>
+                                <p class="mt-2 text-muted">Renowned for joint preservation techniques and expert
+                                    recovery pathways.</p>
+                                <button class="btn btn-outline-primary btn-sm full-width mt-3"
+                                    onclick="openAppointmentModal('Dr. F. Abdul Khader', 'ORTHOPEDICS')">Book
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="doctor-card fade-up border-radius">
+                            <div class="doc-info text-left p-4">
+                                <h4>Dr. Archana Kulasekaran</h4>
+                                <span class="doc-spec">Pediatrician</span>
+                                <p class="mt-2 text-muted">Expert child healthcare designed for sensitive, early-stage
+                                    health interventions.</p>
+                                <button class="btn btn-outline-primary btn-sm full-width mt-3"
+                                    onclick="openAppointmentModal('Dr. Archana Kulasekaran', 'PEADIATRICS')">Book
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="doctor-card fade-up stagger-1 border-radius">
+                            <div class="doc-info text-left p-4">
+                                <h4>Dr. N. Praveen Chander</h4>
+                                <span class="doc-spec">Neurologist</span>
+                                <p class="mt-2 text-muted">Focused primarily on nervous system disorders utilizing
+                                    cutting-edge neurodiagnostics.</p>
+                                <button class="btn btn-outline-primary btn-sm full-width mt-3"
+                                    onclick="openAppointmentModal('Dr. N. Praveen Chander', 'NEUROLOGY')">Book
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide">
+                        <div class="doctor-card fade-up stagger-2 border-radius">
+                            <div class="doc-info text-left p-4">
+                                <h4>Dr. Arasi D. M</h4>
+                                <span class="doc-spec">Psychiatrist</span>
+                                <p class="mt-2 text-muted">Providing multi-layered holistic treatment methods for
+                                    complete mental well-being.</p>
+                                <button class="btn btn-outline-primary btn-sm full-width mt-3"
+                                    onclick="openAppointmentModal('Dr. Arasi D. M', 'PSYCHIATRY')">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Highlight -->
+        <section id="services" class="services-highlight section-padding bg-dark text-white">
+            <div class="background-curves"></div>
+            <div class="container relative z-10">
+                <div class="section-title text-center fade-up light-title">
+                    <h5 class="subtitle text-orange">Premium Care</h5>
+                    <h2>Advanced Patient Services</h2>
+                    <div class="title-line bg-orange mx-auto"></div>
+                </div>
+
+                <div class="services-grid mt-5">
+                    <!-- Service 1 -->
+                    <div class="service-glow-card fade-up stagger-1">
+                        <div class="card-content">
+                            <div class="uniform-icon">
+                                <i class="fas fa-wheelchair fa-2x"></i>
+                            </div>
+                            <h3>Physiotherapy & Rehabilitation</h3>
+                            <p>Recover faster with our state-of-the-art restorative therapies designed for maximum
+                                physical wellness.</p>
+                            <a href="#" class="link-arrow">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-glow-card highlight-card fade-up stagger-2">
+                        <div class="card-content">
+                            <div class="uniform-icon">
+                                <i class="fas fa-ambulance fa-2x"></i>
+                            </div>
+                            <h3>Emergency & Critical Care</h3>
+                            <p>Instant response trauma unit. Golden hour experts available 24/7 for life-saving
+                                precision.</p>
+                            <a href="#" class="link-arrow text-red">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-glow-card fade-up stagger-3">
+                        <div class="card-content">
+                            <div class="uniform-icon">
+                                <i class="fas fa-microscope fa-2x"></i>
+                            </div>
+                            <h3>Diagnostics & Laboratory Services</h3>
+                            <p>High tech, accurate and ultra-fast diagnostics lab equipped with modern multi-slice
+                                scanners.</p>
+                            <a href="#" class="link-arrow">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Elevating Healing Split Section -->
+        <section id="excellence" class="excellence-section section-padding">
+            <div class="container">
+                <div class="split-layout">
+                    <div class="split-image parallax-img fade-up">
+                        <div class="img-wrapper dec-border">
+                            <img src="https://supremehospitals.in/wp-content/uploads/2026/02/doctor.webp"
+                                alt="Specialized Medical Excellence">
+                            <div class="experience-badge parallax-badge">
+                                <h3>25+</h3>
+                                <span>Years of Trust</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="split-content fade-up stagger-2">
+                        <h5 class="subtitle text-accent">Commitment to Care</h5>
+                        <h2>Elevating Healing with Specialized Medical Excellence</h2>
+                        <p class="mt-3">At Supreme Speciality Hospitals, we combine visionary science with compassionate
+                            care. Our multi-disciplinary approach ensures all patients get precise treatments in modern
+                            healing environments.</p>
+
+                        <ul class="feature-list mt-4">
+                            <li><i class="fas fa-check-circle text-blue"></i> Intensive Care Units with latest life
+                                support.</li>
+                            <li><i class="fas fa-check-circle text-blue"></i> Specialized Care Pathways customized for
+                                you.</li>
+                            <li><i class="fas fa-check-circle text-blue"></i> Medical & Surgical expertise under one
+                                roof.</li>
+                        </ul>
+
+                        <div class="emergency-highlight-box mt-4">
+                            <div class="icon pulse">
+                                <i class="fas fa-plus-square"></i>
+                            </div>
+                            <div class="text">
+                                <h4 class="text-red">Emergency Medical Care 24/7</h4>
+                                <p>Uncompromised quick response when seconds matter.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health & Wellness Programs (Orbit Layered Cards) -->
+        <section id="wellness" class="wellness-section section-padding bg-soft overflow-hidden">
+            <div class="container text-center preview-text">
+                <h5 class="subtitle text-accent fade-up">Proactive Health</h5>
+                <h2 class="fade-up stagger-1">Health & Wellness Programs</h2>
+                <p class="section-desc mx-auto fade-up stagger-2">Our holistic health programs focus on preventing
+                    illnesses before they start. Join our complete care system.</p>
+            </div>
+            <div class="wellness-grid mt-5">
+                <!-- Program 1 -->
+                <div class="wellness-card card-blue fade-up">
+                    <div class="card-bg-icon"><i class="fas fa-stethoscope"></i></div>
+                    <div class="card-icon-box">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h4>Comprehensive Checkups</h4>
+                    <p>Full-body screening packages designed for early detection and peace of mind.</p>
+                    <div class="card-accent-line"></div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="wellness-card card-orange fade-up stagger-1">
+                    <div class="card-bg-icon"><i class="fas fa-shield-virus"></i></div>
+                    <div class="card-icon-box">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h4>Preventive Care</h4>
+                    <p>Advanced vaccinations and early intervention strategies to keep you healthy.</p>
+                    <div class="card-accent-line"></div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="wellness-card card-green fade-up stagger-2">
+                    <div class="card-bg-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="card-icon-box">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Wellness Consultation</h4>
+                    <p>Personalized guidance for diet, stress management, and mental well-being.</p>
+                    <div class="card-accent-line"></div>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="wellness-card card-pink fade-up stagger-3">
+                    <div class="card-bg-icon"><i class="fas fa-running"></i></div>
+                    <div class="card-icon-box">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h4>Lifestyle Guidance</h4>
+                    <p>Tailored fitness and daily habit corrections to optimize your vitality.</p>
+                    <div class="card-accent-line"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="choose-us" class="choose-us section-padding">
+            <div class="container">
+                <div class="section-title text-center fade-up">
+                    <h5 class="subtitle text-accent">The Supreme Advantage</h5>
+                    <h2>Why Choose Us</h2>
+                    <div class="title-line mx-auto"></div>
+                </div>
+                <div class="benefits-grid mt-5">
+                    <div class="benefit-card fade-up">
+                        <i class="fas fa-user-md text-blue fa-3x"></i>
+                        <h4>Expert Doctors</h4>
+                        <p>Nationally recognized specialists leading our departments.</p>
+                    </div>
+                    <div class="benefit-card fade-up stagger-1">
+                        <i class="fas fa-hospital text-orange fa-3x"></i>
+                        <h4>Advanced Facilities</h4>
+                        <p>World-class technology and clean infrastructure.</p>
+                    </div>
+                    <div class="benefit-card fade-up stagger-2">
+                        <i class="fas fa-hands-helping text-pink fa-3x"></i>
+                        <h4>Patient-Centric Care</h4>
+                        <p>Empathy-driven nursing ensuring your comfort.</p>
+                    </div>
+                    <div class="benefit-card fade-up">
+                        <i class="fas fa-ambulance text-red fa-3x"></i>
+                        <h4>24/7 Emergency</h4>
+                        <p>Readiness that saves lives at any hour.</p>
+                    </div>
+                    <div class="benefit-card fade-up stagger-1">
+                        <i class="fas fa-om text-accent fa-3x"></i>
+                        <h4>Holistic Healing</h4>
+                        <p>Integrating modern medicine with mental well-being.</p>
+                    </div>
+                    <div class="benefit-card fade-up stagger-2">
+                        <i class="fas fa-bed text-blue fa-3x"></i>
+                        <h4>Comfort & Safety</h4>
+                        <p>Spacious, sterilized private suites for recovery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Urgent Emergency Block -->
+        <section id="emergency-banner" class="emergency-banner">
+            <div class="container d-flex wrap-sm justify-between align-center">
+                <div class="emergency-info zoom-in">
+                    <div class="flex-align">
+                        <i class="fas fa-phone-volume fa-4x text-white pulse-fast"></i>
+                        <div>
+                            <h2 class="text-white m-0">24 HOUR EMERGENCY</h2>
+                            <p class="text-white m-0 opacity-80">Immediate medical attention just a call away.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="emergency-action zoom-in stagger-2 mt-sm-3">
+                    <a href="tel:+919876543210" class="btn btn-white btn-lg btn-glow-white"><i class="fas fa-phone"></i>
+                        +91 98765 43210</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="testimonials-section section-padding bg-soft">
+            <div class="container">
+                <div class="section-title text-center fade-up">
+                    <h5 class="subtitle text-accent">Patient Stories</h5>
+                    <h2>Words of Trust</h2>
+                    <p class="section-desc mx-auto">Hear real stories from our patients who experienced life-changing
+                        recoveries at Supreme Hospitals.</p>
+                    <div class="title-line mx-auto"></div>
+                </div>
+
+                <div class="testimonial-video-container mt-5 fade-up stagger-2 mx-auto" style="max-width: 900px;">
+                    <div class="video-card glass-card dark-shadow border-radius overflow-hidden p-3 bg-white"
+                        style="border-radius: 20px;">
+                        <div class="video-wrapper relative border-radius overflow-hidden"
+                            style="position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px;">
+                            <iframe src="https://www.youtube.com/embed/Mjqf7tUyl5k?start=8" title="Patient Testimonial"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="p-4 bg-white text-center" style="padding: 25px;">
+                            <h4 class="mb-2 text-dark">Real Stories, Real Healing</h4>
+                            <p class="text-muted m-0 text-sm">Experience the journey of recovery through the eyes of our
+                                patients. Our commitment to specialized medical excellence ensures that every individual
+                                receives the highest quality of care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section section-padding">
+            <div class="container">
+                <div class="section-title text-center fade-up">
+                    <h5 class="subtitle text-accent">Knowledge Hub</h5>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="title-line mx-auto"></div>
+                </div>
+                <div class="faq-accordion mt-5 max-w-800 mx-auto fade-up stagger-1">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Do you offer 24/7 emergency services? <i
+                                class="fas fa-plus icon"></i></button>
+                        <div class="accordion-content">
+                            <p>Yes, our emergency and trauma center is fully equipped and staffed by specialists 24
+                                hours a day, 7 days a week to handle any medical emergencies.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">How do I book an appointment with a specialist? <i
+                                class="fas fa-plus icon"></i></button>
+                        <div class="accordion-content">
+                            <p>You can easily book an appointment by clicking the "Book an Appointment" button on our
+                                website, calling our helpline, or directly visiting the front desk.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Do you accept health insurance? <i
+                                class="fas fa-plus icon"></i></button>
+                        <div class="accordion-content">
+                            <p>We partner with all major health insurance providers. Please contact our billing
+                                department to verify your specific insurance coverage before your visit.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">What are the visiting hours for inpatients? <i
+                                class="fas fa-plus icon"></i></button>
+                        <div class="accordion-content">
+                            <p>General visiting hours are usually from 10:00 AM to 12:00 PM and 4:00 PM to 7:00 PM.
+                                However, ICU timings are restricted and rely strictly on medical protocols.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding bg-soft">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info fade-up">
+                        <h5 class="subtitle text-accent">Get In Touch</h5>
+                        <h2>We're Here to Help You</h2>
+                        <p class="mt-2 mb-4">Reach out to us for appointments, inquiries, or emergencies. Our support
+                            team is ready.</p>
+
+                        <div class="info-block glass-card mb-3">
+                            <div class="icon-box bg-blue"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="text-box">
+                                <h5>Our Location</h5>
+                                <p>123 Supreme Health Avenue, Medical City, 452001</p>
+                            </div>
+                        </div>
+                        <div class="info-block glass-card mb-3">
+                            <div class="icon-box bg-orange"><i class="fas fa-phone-alt"></i></div>
+                            <div class="text-box">
+                                <h5>Contact Us</h5>
+                                <p>Emergency: <a href="tel:+919876543210">+91 98765 43210</a><br>Info: +91 88888 88888
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info-block glass-card">
+                            <div class="icon-box bg-pink"><i class="fas fa-envelope"></i></div>
+                            <div class="text-box">
+                                <h5>Email Us</h5>
+                                <p><a href="mailto:info@supremehospitals.in">info@supremehospitals.in</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-side fade-up stagger-2">
+                        <form class="premium-form box-shadow">
+                            <h3 class="mb-4">Send a Message</h3>
+                            <div class="form-row">
+                                <input type="text" placeholder="Your Name" required>
+                                <input type="email" placeholder="Email Address" required>
+                            </div>
+                            <input type="text" placeholder="Subject" required class="full-width">
+                            <textarea placeholder="Your Message" rows="5" class="full-width" required></textarea>
+                            <button type="submit" class="btn btn-primary btn-lg mt-3">Send Message <i
+                                    class="fas fa-paper-plane ml-2"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="map-container mt-5 fade-up stagger-3 box-shadow border-radius overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113941.13783515865!2d80.1299949673418!3d12.87102144760599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f0022416bc5%3A0xe67db7ff0d5c80ef!2sSupreme%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1707077598504!5m2!1sen!2sin"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="layout.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

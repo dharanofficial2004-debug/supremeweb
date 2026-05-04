@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Feedback | Supreme Speciality Hospital</title>
+    <meta name="description"
+        content="Share your experience with Supreme Speciality Hospital. We value your feedback to help us improve our medical services and patient care.">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="feedback.css">
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="contact-hero" style="background: var(--gradient-pink);">
+            <div class="container text-center">
+                <div class="fade-up">
+                    <span class="subtitle text-white">YOUR VOICE MATTERS</span>
+                    <h1>PATIENT FEEDBACK</h1>
+                    <p class="mt-3">Help us serve you better by sharing your experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback Form -->
+        <section class="section-padding bg-soft">
+            <div class="container">
+                <div class="feedback-container">
+                    <form action="#" method="POST">
+                        <!-- Patient Info -->
+                        <div class="feedback-section-title">Patient Information</div>
+                        <div class="rating-grid">
+                            <div class="form-group">
+                                <label>I am a *</label>
+                                <select required>
+                                    <option value="Patient">Patient</option>
+                                    <option value="Attender">Attender</option>
+                                    <option value="Visitor">Visitor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Name of the Patient *</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Contact Number *</label>
+                                <input type="tel" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email ID *</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Visit Date *</label>
+                                <input type="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Room Number (Optional)</label>
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <!-- Service Ratings -->
+                        <div class="feedback-section-title mt-5">Service Quality Survey</div>
+                        <div class="rating-grid">
+                            <div class="form-group">
+                                <label>Reception (Guidance & Response)</label>
+                                <select>
+                                    <option value="Excellent">Excellent</option>
+                                    <option value="Very Good">Very Good</option>
+                                    <option value="Good">Good</option>
+                                    <option value="Satisfactory">Satisfactory</option>
+                                    <option value="Poor">Poor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Treatment by Physicians</label>
+                                <select>
+                                    <option value="Excellent">Excellent</option>
+                                    <option value="Very Good">Very Good</option>
+                                    <option value="Good">Good</option>
+                                    <option value="Satisfactory">Satisfactory</option>
+                                    <option value="Poor">Poor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Nursing Staff Care</label>
+                                <select>
+                                    <option value="Excellent">Excellent</option>
+                                    <option value="Very Good">Very Good</option>
+                                    <option value="Good">Good</option>
+                                    <option value="Satisfactory">Satisfactory</option>
+                                    <option value="Poor">Poor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Pharmacy Service</label>
+                                <select>
+                                    <option value="Excellent">Excellent</option>
+                                    <option value="Very Good">Very Good</option>
+                                    <option value="Good">Good</option>
+                                    <option value="Satisfactory">Satisfactory</option>
+                                    <option value="Poor">Poor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Billing Promptness</label>
+                                <select>
+                                    <option value="Excellent">Excellent</option>
+                                    <option value="Very Good">Very Good</option>
+                                    <option value="Good">Good</option>
+                                    <option value="Satisfactory">Satisfactory</option>
+                                    <option value="Poor">Poor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Cleaning & Hygiene</label>
+                                <select>
+                                    <option value="Excellent">Excellent</option>
+                                    <option value="Very Good">Very Good</option>
+                                    <option value="Good">Good</option>
+                                    <option value="Satisfactory">Satisfactory</option>
+                                    <option value="Poor">Poor</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Overall Experience -->
+                        <div class="feedback-section-title mt-5">Overall Experience</div>
+                        <div class="form-group">
+                            <label>Rate your overall experience *</label>
+                            <select required>
+                                <option value="Excellent">Excellent</option>
+                                <option value="Very Good">Very Good</option>
+                                <option value="Good">Good</option>
+                                <option value="Satisfactory">Satisfactory</option>
+                                <option value="Poor">Poor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Any other remarks / name of staff to appreciate?</label>
+                            <textarea rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary full-width mt-4"
+                            style="background: var(--pink-accent); border-color: var(--pink-accent);">Submit
+                            Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="layout.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

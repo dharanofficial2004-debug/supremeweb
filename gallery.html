@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Supreme Speciality Hospital</title>
+    <meta name="description"
+        content="View our hospital infrastructure, advanced medical equipment, and clinical facilities at Supreme Speciality Hospital, Chennai.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        .gallery-wrapper {
+            background-color: var(--soft-light, #f8fafc);
+        }
+
+        .gallery-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--primary-blue, #0054a9);
+            color: var(--primary-blue, #0054a9);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-blue, #0054a9);
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 84, 169, 0.2);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            /* Required for smooth filtering */
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .gallery-item.hide {
+            display: none;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 84, 169, 0.15);
+            z-index: 2;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 31, 63, 0.9) 0%, rgba(0, 31, 63, 0.4) 50%, rgba(0, 31, 63, 0) 100%);
+            padding: 30px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h5 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            transform: translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .gallery-overlay p {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin: 8px 0 0;
+            transform: translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-delay: 0.05s;
+        }
+
+        .gallery-item:hover .gallery-overlay h5,
+        .gallery-item:hover .gallery-overlay p {
+            transform: translateY(0);
+        }
+
+        /* Modals and other global elements */
+        .floating-cta {
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <!-- Floating CTA -->
+    <button class="floating-cta ripple" onclick="openModal()">
+        <span class="pulse-ring"></span>
+        <i class="fas fa-calendar-plus"></i>
+        <span>Book an Appointment</span>
+    </button>
+
+    <!-- Appointment Modal Form -->
+    <!-- (Normally it's centralized, but keeping here for fallback if footer fails, though script.js handles it in footer) -->
+
+    <main>
+        <!-- Inner Banner (Same styling as About Us) -->
+        <section class="inner-banner">
+            <div class="banner-overlay"></div>
+            <div class="container relative z-10 text-center">
+                <h1 class="fade-up light-title">Our Gallery</h1>
+
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-wrapper section-padding">
+            <div class="container">
+                <div class="section-title text-center fade-up">
+                    <h5 class="subtitle text-accent">Our Facilities</h5>
+                    <h2>State-of-the-art Infrastructure</h2>
+                    <div class="title-line mx-auto"></div>
+                </div>
+
+                <!-- Filters -->
+                <div class="gallery-filters fade-up stagger-1" id="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ot">Operation Theatre</button>
+                    <button class="filter-btn" data-filter="suite">Suite Room</button>
+                    <button class="filter-btn" data-filter="nicu">NICU</button>
+                    <button class="filter-btn" data-filter="icu">ICU</button>
+                    <button class="filter-btn" data-filter="labour">Labour Ward</button>
+                    <button class="filter-btn" data-filter="pharmacy">Pharmacy</button>
+                    <button class="filter-btn" data-filter="ambulance">Ambulance</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="gallery-grid">
+
+                    <!-- Operation Theatre -->
+                    <div class="gallery-item fade-up" data-category="ot">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6619-min-scaled.jpg"
+                            alt="Operation Theatre 1">
+                        <div class="gallery-overlay">
+                            <h5>Operation Theatre</h5>
+                            <p>Advanced Surgical Facilities</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item fade-up" data-category="ot">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6610-min-scaled.jpg"
+                            alt="Operation Theatre 2">
+                        <div class="gallery-overlay">
+                            <h5>Operation Theatre</h5>
+                            <p>State-of-the-Art Setup</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item fade-up" data-category="ot">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6606-min-scaled.jpg"
+                            alt="Operation Theatre 3">
+                        <div class="gallery-overlay">
+                            <h5>Operation Theatre</h5>
+                            <p>Precision Equipment</p>
+                        </div>
+                    </div>
+
+                    <!-- Suite Room -->
+                    <div class="gallery-item fade-up" data-category="suite">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6639-min-scaled.jpg"
+                            alt="Suite Room 1">
+                        <div class="gallery-overlay">
+                            <h5>Suite Room</h5>
+                            <p>Premium Comfort</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item fade-up" data-category="suite">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6638-min-scaled.jpg"
+                            alt="Suite Room 2">
+                        <div class="gallery-overlay">
+                            <h5>Suite Room</h5>
+                            <p>Luxury Amenities</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item fade-up" data-category="suite">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6636-min-scaled.jpg"
+                            alt="Suite Room 3">
+                        <div class="gallery-overlay">
+                            <h5>Suite Room</h5>
+                            <p>Spacious Living</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item fade-up" data-category="suite">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6633-min-scaled.jpg"
+                            alt="Suite Room 4">
+                        <div class="gallery-overlay">
+                            <h5>Suite Room</h5>
+                            <p>Relaxing Environment</p>
+                        </div>
+                    </div>
+
+                    <!-- NICU -->
+                    <div class="gallery-item fade-up" data-category="nicu">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6624-min-scaled.jpg"
+                            alt="NICU">
+                        <div class="gallery-overlay">
+                            <h5>NICU</h5>
+                            <p>Neonatal Intensive Care</p>
+                        </div>
+                    </div>
+
+                    <!-- ICU -->
+                    <div class="gallery-item fade-up" data-category="icu">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6624-min-scaled.jpg"
+                            alt="ICU">
+                        <div class="gallery-overlay">
+                            <h5>ICU</h5>
+                            <p>Intensive Care Unit</p>
+                        </div>
+                    </div>
+
+                    <!-- Labour Ward -->
+                    <div class="gallery-item fade-up" data-category="labour">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6630-min-scaled.jpg"
+                            alt="Labour Ward 1">
+                        <div class="gallery-overlay">
+                            <h5>Labour Ward</h5>
+                            <p>Maternity Care</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item fade-up" data-category="labour">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6601-min-scaled.jpg"
+                            alt="Labour Ward 2">
+                        <div class="gallery-overlay">
+                            <h5>Labour Ward</h5>
+                            <p>Safe Deliveries</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item fade-up" data-category="labour">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6616-min-scaled.jpg"
+                            alt="Labour Ward 3">
+                        <div class="gallery-overlay">
+                            <h5>Labour Ward</h5>
+                            <p>Specialized Staff</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item fade-up" data-category="labour">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6598-min-scaled.jpg"
+                            alt="Labour Ward 4">
+                        <div class="gallery-overlay">
+                            <h5>Labour Ward</h5>
+                            <p>Comfortable Recovery</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item fade-up" data-category="labour">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6613-min-scaled.jpg"
+                            alt="Labour Ward 5">
+                        <div class="gallery-overlay">
+                            <h5>Labour Ward</h5>
+                            <p>Advanced Facilities</p>
+                        </div>
+                    </div>
+
+                    <!-- Pharmacy -->
+                    <div class="gallery-item fade-up" data-category="pharmacy">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6652-min-scaled.jpg"
+                            alt="Pharmacy 1">
+                        <div class="gallery-overlay">
+                            <h5>Pharmacy</h5>
+                            <p>24/7 Medicines</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item fade-up" data-category="pharmacy">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A6648-min-scaled.jpg"
+                            alt="Pharmacy 2">
+                        <div class="gallery-overlay">
+                            <h5>Pharmacy</h5>
+                            <p>Complete Stock</p>
+                        </div>
+                    </div>
+
+                    <!-- Ambulance -->
+                    <div class="gallery-item fade-up" data-category="ambulance">
+                        <img src="https://supremehospitals.in/wp-content/uploads/2023/10/904A0068-min-scaled.jpg"
+                            alt="Ambulance">
+                        <div class="gallery-overlay">
+                            <h5>Ambulance</h5>
+                            <p>Emergency Services</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="layout.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.classList.remove('hide');
+
+                            // Re-trigger animation
+                            item.style.animation = 'none';
+                            item.offsetHeight; /* trigger reflow */
+                            item.style.animation = null;
+                        } else {
+                            item.classList.add('hide');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

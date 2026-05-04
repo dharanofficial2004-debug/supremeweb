@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Supreme Speciality Hospitals</title>
+    <meta name="description"
+        content="Learn about Supreme Hospitals – a trusted multi-speciality hospital in Padur, Chennai with expert doctors, advanced care, and a commitment to your health.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <!-- Floating CTA -->
+    <button class="floating-cta ripple" onclick="openModal()">
+        <span class="pulse-ring"></span>
+        <i class="fas fa-calendar-plus"></i>
+        <span>Book an Appointment</span>
+    </button>
+
+    <!-- Appointment Modal Form -->
+    <div class="modal-overlay" id="appointment-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>Request an Appointment</h3>
+                <p>Fill out the form below and our team will get back to you shortly.</p>
+            </div>
+            <form class="appointment-form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="" disabled selected>Select Department</option>
+                        <option value="cardio">Cardiology</option>
+                        <option value="neuro">Neurology</option>
+                        <option value="ortho">Orthopedics</option>
+                        <option value="dental">Dental</option>
+                        <option value="gyno">Gynecology</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="date" required>
+                </div>
+                <div class="form-group full-width">
+                    <textarea placeholder="Message / Symptoms" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width btn-glow">Confirm Request</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <!-- Inner Banner -->
+        <section class="inner-banner">
+            <div class="banner-overlay"></div>
+            <div class="container relative z-10 text-center">
+                <h1 class="fade-up light-title">About Us</h1>
+
+            </div>
+        </section>
+
+        <!-- About Content Section -->
+        <section class="about-content-section section-padding">
+            <div class="container">
+                <div class="split-layout about-split">
+                    <div class="about-images fade-up">
+                        <div class="about-img-wrapper">
+                            <img src="https://supremehospitals.in/wp-content/uploads/2023/10/supreme-aboutus2.png"
+                                alt="Supreme Hospital Building" class="about-main-img">
+                            <div class="about-img-accent"></div>
+                        </div>
+                    </div>
+                    <div class="about-text fade-up stagger-1">
+                        <h5 class="subtitle text-accent">Who We Are</h5>
+                        <h2>Leading Multi-Speciality Hospital in Padur</h2>
+                        <p class="mt-3 text-muted">Supreme Specialty Hospitals Private Limited is an integrated
+                            healthcare delivery service provider in Chennai. We currently operate our services in Padur,
+                            OMR, Chennai, and Vandalur – Kelambakkam road at Kandigai.</p>
+                        <p class="mt-2 text-muted">Supreme Hospitals, located in Padur, Kelambakkam, is a 50-bed
+                            multispeciality hospital renowned for its exceptional hospitality and world-class
+                            infrastructure. Offering a wide range of medical services, Supreme Hospitals ensures
+                            top-notch care with state-of-the-art facilities and a dedicated team of healthcare
+                            professionals.</p>
+                        <p class="mt-2 text-muted">Patients can expect personalized attention and comprehensive
+                            treatment, making it a trusted choice for healthcare in the region.</p>
+
+                        <ul class="feature-list mt-4">
+                            <li><i class="fas fa-check-circle text-blue"></i> State-of-the-art Operation Theatre.</li>
+                            <li><i class="fas fa-check-circle text-blue"></i> 5 Specialist Consultation Suites.</li>
+                            <li><i class="fas fa-check-circle text-blue"></i> Fully computerized matching diagnostic
+                                facilities.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Section -->
+        <section class="mission-vision-section overflow-hidden text-white section-padding">
+            <div class="container container-large relative z-10">
+                <div class="mission-vision-grid">
+                    <!-- Mission Card -->
+                    <div class="mission-vision-card fade-up">
+                        <div class="card-inner-glow">
+                            <div class="mission-icon">
+                                <i class="fas fa-bullseye pulse-strong"></i>
+                            </div>
+                            <h2 class="light-title text-center">Our Mission</h2>
+                            <p class="mission-text text-center">
+                                To provide consistently excellent and accessible health services to all in need,
+                                ensuring clinical excellence at every step.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Vision Card -->
+                    <div class="mission-vision-card fade-up stagger-1">
+                        <div class="card-inner-glow">
+                            <div class="mission-icon bg-blue-vision">
+                                <i class="fas fa-eye pulse-strong"></i>
+                            </div>
+                            <h2 class="light-title text-center">Our Vision</h2>
+                            <p class="mission-text text-center">
+                                To leave a legacy of excellence that continues to grow year after year, becoming a
+                                global leader in healthcare.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Decorative animated elements -->
+            <div class="flare-1"></div>
+            <div class="flare-2"></div>
+        </section>
+
+        <!-- Our Facilities Section -->
+        <section class="facilities-section section-padding bg-soft">
+            <div class="container">
+                <div class="section-title text-center fade-up">
+                    <h5 class="subtitle text-accent">Top-Notch Care</h5>
+                    <h2>Our Facilities</h2>
+                    <div class="title-line mx-auto"></div>
+                </div>
+                <div class="facilities-grid mt-5">
+                    <div class="facility-panel fade-up">
+                        <div class="icon-wrap bg-red"><i class="fas fa-ambulance text-white"></i></div>
+                        <div class="facility-info">
+                            <h4>24 Hrs Ambulance</h4>
+                            <p>Rapid response and expert medical care round the clock with our 24-hour ambulance
+                                service.</p>
+                        </div>
+                    </div>
+                    <div class="facility-panel fade-up stagger-1">
+                        <div class="icon-wrap bg-blue"><i class="fas fa-pills text-white"></i></div>
+                        <div class="facility-info">
+                            <h4>Pharmacy</h4>
+                            <p>Our pharmacy provides a comprehensive range of medications for your well-being.</p>
+                        </div>
+                    </div>
+                    <div class="facility-panel fade-up stagger-2">
+                        <div class="icon-wrap bg-cyan"><i class="fas fa-procedures text-white"></i></div>
+                        <div class="facility-info">
+                            <h4>Operation Theatre</h4>
+                            <p>State-of-the-art operation theatre, where advanced technology meets skilled
+                                professionals.</p>
+                        </div>
+                    </div>
+                    <div class="facility-panel fade-up">
+                        <div class="icon-wrap bg-orange"><i class="fas fa-home text-white"></i></div>
+                        <div class="facility-info">
+                            <h4>Supreme at Home</h4>
+                            <p>Pioneering initiative bringing essential health services right to your doorstep
+                                seamlessly.</p>
+                        </div>
+                    </div>
+                    <div class="facility-panel fade-up stagger-1">
+                        <div class="icon-wrap bg-pink"><i class="fas fa-x-ray text-white"></i></div>
+                        <div class="facility-info">
+                            <h4>X-Ray Digital</h4>
+                            <p>Clarity in diagnostics with our advanced digital X-ray for accurate assessments.</p>
+                        </div>
+                    </div>
+                    <div class="facility-panel fade-up stagger-2">
+                        <div class="icon-wrap bg-primary"><i class="fas fa-user-nurse text-white"></i></div>
+                        <div class="facility-info">
+                            <h4>Special Nurses</h4>
+                            <p>Personalized care with our team of compassionate and specialized nurses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hospital Highlight Block -->
+        <section class="hospital-highlight-block">
+            <div class="container">
+                <div class="highlight-strip fade-up box-shadow">
+                    <div class="strip-left bg-gradient-blue text-white">
+                        <h3>Supreme Speciality Hospital</h3>
+                        <p>Located in Padur, we stand as a prominent healthcare facility with 50 beds. Our dedication
+                            ensures a positive and comfortable healthcare journey for you.</p>
+                    </div>
+                    <div class="strip-right bg-white">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt text-orange fa-2x"></i>
+                            <div>
+                                <h5>Location</h5>
+                                <p class="text-muted m-0">No. 1/56, OMR, Padur, Chennai 603103.</p>
+                            </div>
+                        </div>
+                        <div class="contact-item mt-3">
+                            <i class="fas fa-phone-alt text-blue fa-2x"></i>
+                            <div>
+                                <h5>Emergency Line</h5>
+                                <a href="tel:+919940010007" class="text-dark font-weight-bold">+91 99400 10007</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="layout.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

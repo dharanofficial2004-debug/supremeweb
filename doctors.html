@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors | Expert Medical Team | Supreme Speciality Hospital</title>
+    <meta name="description"
+        content="Meet our team of expert doctors and specialists at Supreme Speciality Hospital. High-quality care across cardiology, orthopedics, neurology, and more.">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="doctors.css">
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="doctors-header-hero">
+            <div class="container">
+                <div class="fade-up">
+                    <span class="subtitle text-blue">MEDICAL EXCELLENCE</span>
+                    <h1>MEET OUR DOCTORS</h1>
+                    <p class="mt-3 mx-auto section-desc">Our hospital brings together the best medical minds across
+                        multiple specialities to provide world-class healthcare with a human touch.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Filter Bar (Super UX) -->
+        <section class="search-bar-section">
+            <div class="container">
+                <div class="search-filter-bar fade-up">
+                    <div class="category-select-wrapper">
+                        <i class="fas fa-filter"></i>
+                        <select onchange="categoryDropdownFilter(this.value)">
+                            <option value="ALL">All Specialities</option>
+                            <option value="ANAESTHESIOLOGY">Anaesthesiology</option>
+                            <option value="CARDIOLOGY">Cardiology</option>
+                            <option value="DERMATOLOGY">Dermatology</option>
+                            <option value="ENT">ENT</option>
+                            <option value="GENERAL SURGERY">General Surgery</option>
+                            <option value="GENERAL MEDICINE">General Medicine</option>
+                            <option value="DIABETOLOGY">Diabetology</option>
+                            <option value="INTERVENTIONAL PULMONOLOGY">Pulmonology</option>
+                            <option value="NEPHROLOGY">Nephrology</option>
+                            <option value="NEUROLOGY">Neurology</option>
+                            <option value="OBSTRETICS & GYNECOLOGY">Gynaecology</option>
+                            <option value="OPHTHALMOLOGY">Ophthalmology</option>
+                            <option value="DENTAL">Dental</option>
+                            <option value="ORTHOPEDICS">Orthopedics</option>
+                            <option value="PEADIATRICS">Pediatrics</option>
+                            <option value="PAEDIATRIC SURGERY">Paediatric Surgery</option>
+                            <option value="PLASTIC SURGERY">Plastic Surgery</option>
+                            <option value="PYSCHIATRICS">Psychiatry</option>
+                            <option value="RADIOLOGY">Radiology</option>
+                            <option value="SURGICAL GASTROENTEROLOGY">Gastroenterology</option>
+                            <option value="VASCULAR SURGERY">Vascular Surgery</option>
+                            <option value="UROLOGY AND ANDROLOGY">Urology</option>
+                            <option value="ONCOLOGY">Oncology</option>
+                            <option value="LABORATORY">Pathology</option>
+                        </select>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search by doctor name or degree..."
+                            oninput="searchDoctors(this.value)">
+                    </div>
+                </div>
+
+                <div class="doctors-full-grid doctors-grid mt-5">
+                    <!-- JS will populate this -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () { emailjs.init("KCLDqvxFc09RZMMLk"); })();
+    </script>
+
+    <!-- Scripts -->
+    <script src="layout.js"></script>
+    <script src="doctors-data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderAllDoctors();
+        });
+    </script>
+</body>
+
+</html>

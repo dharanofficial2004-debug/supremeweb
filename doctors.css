@@ -1,0 +1,280 @@
+/* DOCTORS PAGE PREMIUM MINIMALIST STYLES */
+
+.doctors-header-hero {
+    position: relative;
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, var(--dark-black), var(--primary-blue));
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+}
+
+.doctors-header-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(70, 127, 247, 0.4), transparent);
+    z-index: 1;
+}
+
+.doctors-header-hero .container {
+    position: relative;
+    z-index: 10;
+}
+
+.section-desc {
+    max-width: 800px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.doctors-header-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.search-bar-section {
+    padding: 40px 0 20px;
+    background: var(--soft-light);
+    margin-top: -40px;
+    position: relative;
+    z-index: 100;
+}
+
+.search-filter-bar {
+    background: white;
+    padding: 6px 12px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 84, 169, 0.08);
+    transition: all 0.3s ease;
+}
+
+.category-select-wrapper {
+    flex: 0 0 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.category-select-wrapper i {
+    color: var(--primary-blue);
+    margin-right: 8px;
+    font-size: 0.9rem;
+}
+
+.category-select-wrapper select {
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.search-filter-bar .divider {
+    width: 1px;
+    height: 20px;
+    background: #e2e8f0;
+    margin: 0 5px;
+}
+
+.search-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.search-input-wrapper i {
+    color: var(--text-light);
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.search-input-wrapper input {
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    width: 100%;
+    outline: none;
+    color: var(--text-color);
+}
+
+/* MOBILE FIX FOR SEARCH BAR */
+@media (max-width: 768px) {
+    .search-filter-bar {
+        flex-direction: column;
+        border-radius: 15px;
+        padding: 10px;
+        gap: 8px;
+        max-width: 90%;
+    }
+
+    .category-select-wrapper {
+        flex: 1;
+        width: 100%;
+        padding: 8px 0;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    .search-filter-bar .divider {
+        display: none;
+    }
+
+    .search-input-wrapper {
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .doctors-filter-nav {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .doctors-filter-nav::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+
+.no-results {
+    text-align: center;
+    padding: 80px 0;
+    grid-column: 1 / -1;
+}
+
+.no-results i {
+    font-size: 4rem;
+    color: #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* THE NEW MINIMALIST CARD (SUPER UX) */
+.doctor-minimal-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 84, 169, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-minimal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 84, 169, 0.1);
+    border-color: var(--primary-blue);
+}
+
+.doc-badge {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: rgba(0, 84, 169, 0.05);
+    color: var(--primary-blue);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.doctor-minimal-card h3 {
+    font-size: 1.6rem;
+    color: var(--dark-black);
+    margin-bottom: 8px;
+    font-family: 'Outfit', sans-serif;
+    margin-top: 10px;
+}
+
+.doctor-minimal-card .degree {
+    font-size: 1rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.doctor-minimal-card .specialty {
+    font-size: 0.9rem;
+    color: var(--orange-red);
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.doc-actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-view-dept {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-light);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-view-dept:hover {
+    color: var(--orange);
+}
+
+.btn-view-dept i {
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-view-dept:hover i {
+    transform: translateX(5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .doctors-header-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .doctors-full-grid {
+        grid-template-columns: 1fr;
+    }
+}

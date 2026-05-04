@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department | Supreme Speciality Hospitals</title>
+    <meta name="description" content="Supreme Speciality Hospitals providing excellent healthcare.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body class="department-page">
+
+    <div id="header-placeholder"></div>
+
+    <!-- Floating CTA — opens global Book Appointment modal -->
+    <button class="floating-cta ripple" onclick="openModal()">
+        <i class="fas fa-calendar-plus"></i>
+        <span>Book an Appointment</span>
+    </button>
+
+    <main id="dynamic-main">
+        <!-- Dynamic content mapped from JSON will appear here -->
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () { emailjs.init("KCLDqvxFc09RZMMLk"); })();
+    </script>
+
+    <!-- doctors-data.js must load before script.js so modal can populate doctors -->
+    <script src="doctors-data.js"></script>
+    <script src="department-data.js"></script>
+    <script src="department-router.js"></script>
+    <script src="layout.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

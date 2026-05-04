@@ -1,0 +1,117 @@
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-top grid-4">
+            <div class="footer-col brand-col">
+                <img src="https://supremehospitals.in/wp-content/uploads/2024/08/supreme_logo-128x40-1.webp"
+                    alt="Supreme Logo" class="footer-logo mb-3">
+                <p class="opacity-80">Committed to clinical excellence and patient-centric care. Experience healing
+                    redefined.</p>
+                <div class="social-links mt-4">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about-us.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                    <li><a href="health-check-ups.html"><i class="fas fa-angle-right"></i> Health Check Ups</a></li>
+                    <li><a href="doctors.html"><i class="fas fa-angle-right"></i> Doctors</a></li>
+                    <li><a href="https://supremehospitals.in/blogs/"><i class="fas fa-angle-right"></i> Blog</a></li>
+                    <li><a href="contact-us.html"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-angle-right"></i> Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Departments</h4>
+                <ul>
+                    <li><a href="department.html?dept=cardiology"><i class="fas fa-angle-right"></i> Cardiology</a></li>
+                    <li><a href="department.html?dept=medical-gastroenterology"><i class="fas fa-angle-right"></i>
+                            Gastroenterology</a></li>
+                    <li><a href="department.html?dept=orthopedics"><i class="fas fa-angle-right"></i> Orthopedics</a>
+                    </li>
+                    <li><a href="department.html?dept=obstetrics-gynaecology"><i class="fas fa-angle-right"></i>
+                            Gynecology</a></li>
+                    <li><a href="department.html?dept=pediatrics"><i class="fas fa-angle-right"></i> Pediatrics</a></li>
+                    <li><a href="department.html?dept=urology"><i class="fas fa-angle-right"></i> Urology</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt text-orange"></i> <span>No. 1/56, Old Mahabalipuram Road, Padur,
+                            Chennai 603103.</span></li>
+                    <li><i class="fas fa-phone-alt text-orange"></i> <span>+91 99400 10007</span></li>
+                    <li><i class="fas fa-envelope text-orange"></i> <span>contact@supremehospitals.in</span></li>
+                </ul>
+                <button class="btn btn-primary btn-sm mt-3" onclick="openModal()">Book Appointment</button>
+            </div>
+        </div>
+        <div class="footer-bottom mt-4">
+            <div class="flex-align justify-between wrap-sm text-center-sm">
+                <p>&copy; 2026 Supreme Speciality Hospitals. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a> <span class="sep">|</span> <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- GLOBAL APPOINTMENT MODAL -->
+<div id="appointment-modal" class="modal-overlay">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">&times;</button>
+        <div class="premium-form">
+            <h3 class="mb-4">Book Appointment</h3>
+            <form id="global-appointment-form">
+                <div class="form-group">
+                    <input type="text" name="user_name" placeholder="Patient Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="user_phone" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <select id="modal-dept-select" name="department" onchange="populateModalDoctors()" required>
+                        <option value="">Select Speciality</option>
+                        <option value="ANAESTHESIOLOGY">ANAESTHESIOLOGY</option>
+                        <option value="CARDIOLOGY">CARDIOLOGY</option>
+                        <option value="DERMATOLOGY">DERMATOLOGY</option>
+                        <option value="DIABETOLOGY">DIABETOLOGY</option>
+                        <option value="ENT">ENT</option>
+                        <option value="GENERAL SURGERY">GENERAL SURGERY</option>
+                        <option value="GENERAL MEDICINE">GENERAL MEDICINE</option>
+                        <option value="INTERVENTIONAL PULMONOLOGY">INTERVENTIONAL PULMONOLOGY</option>
+                        <option value="MEDICAL GASTROENTEROLOGY">MEDICAL GASTROENTEROLOGY</option>
+                        <option value="NEPHROLOGY">NEPHROLOGY</option>
+                        <option value="NEUROLOGY">NEUROLOGY</option>
+                        <option value="OBSTRETICS & GYNECOLOGY">OBSTRETICS & GYNECOLOGY</option>
+                        <option value="OPHTHALMOLOGY">OPHTHALMOLOGY</option>
+                        <option value="DENTAL">DENTAL</option>
+                        <option value="ORTHOPEDICS">ORTHOPEDICS</option>
+                        <option value="PAIN & PALLIATIVE CARE">PAIN & PALLIATIVE CARE</option>
+                        <option value="PEADIATRICS">PEADIATRICS</option>
+                        <option value="PSYCHIATRY">PSYCHIATRY</option>
+                        <option value="RADIOLOGY">RADIOLOGY</option>
+                        <option value="UROLOGY AND ANDROLOGY">UROLOGY AND ANDROLOGY</option>
+                        <option value="ONCOLOGY">ONCOLOGY</option>
+                        <option value="LABORATORY">LABORATORY / PATHOLOGY</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="modal-doctor-select" name="doctor" required>
+                        <option value="">Select Doctor</option>
+                    </select>
+                </div>
+                <!-- Hidden Subject for EmailJS consistency -->
+                <input type="hidden" name="subject" value="Appointment Request">
+                <input type="hidden" name="message" value="Appointment requested via the Book Appointment modal.">
+                <button type="submit" id="appointment-submit-btn" class="btn btn-primary full-width mt-2">Confirm
+                    Booking</button>
+            </form>
+            <div id="appointment-form-response" class="mt-3"></div>
+        </div>
+    </div>
+</div>
